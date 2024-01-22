@@ -52,6 +52,6 @@ func login(context *gin.Context) {
 		return
 	}
 
-	context.SetCookie("Authorization", token, 3600 * 24, "/", "", true, true)
+	context.SetCookie("Authorization", token, 3600*24, "/", "", true, true)
 	context.JSON(http.StatusOK, gin.H{"message": "Login successfully!", "token": token})
 }
